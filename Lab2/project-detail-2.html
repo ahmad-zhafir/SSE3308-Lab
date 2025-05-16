@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-flex">
+        <div class="nav-logo">
+          <a class="nav-logo-text">Zhafir Razali</a>
+        </div>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="projects.html" class="nav-link active">Projects</a>
+          <a href="skills.html" class="nav-link">Skills</a>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Project Detail Section -->
+  <section class="project-detail-section">
+    <div class="section-container">
+      <h1 class="section-title">Student Mental Wellness System</h1>
+
+      <div class="project-detail-content">
+
+
+        <div class="carousel">
+  <div class="carousel-images">
+    <img src="images/image10.png" class="project-detail-image active" alt="Project Image 1">
+    <img src="images/image11.png" class="project-detail-image " alt="Project Image 2">
+  </div>
+
+  <!-- Navigation buttons -->
+  <button class="carousel-btn prev">&#10094;</button>
+  <button class="carousel-btn next">&#10095;</button>
+
+  <!-- Dot indicators -->
+  <div class="carousel-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+  </div>
+</div>
+
+
+
+
+
+        <div class="project-detail-text">
+          <p><strong>Overview:</strong> A web-based platform that uses a natural language generation model that generates personalized, structured, and practical recipes using modern AI APIs.</p>
+
+          <p><strong>Key Features:</strong></p>
+          <ul>
+            <li>🧑‍🍳 Personalized recipe based on user input</li>
+            <li>📷 Support image recognition for ingredients</li>
+            <li>🤖 AI-powered recipe suggestions</li>
+            <li>🔗 Use of Gemini API and Vision AI API</li>
+
+          </ul>
+
+          <p><strong>Technologies Used:</strong></p>
+          <div class="project-tags">
+            <span class="project-tag"><i class="fa-brands fa-node-js"></i> Node.js</span>
+            <span class="project-tag"><i class="fas fa-robot"></i> Gemini</span>
+            <span class="project-tag"><i class="fas fa-brain"></i> AI </span>
+
+            
+          </div>
+
+          <div class="project-links">
+            <a href="https://dishdash-m977.onrender.com/" class="project-link" target="_blank">Visit Live Site →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-flex">
+        <div class="footer-brand">
+          <h2 class="footer-title">Zhafir Razali</h2>
+          <p>© 2025 All Rights Reserved</p>
+        </div>
+        <div class="social-links">
+                    <a href="https://github.com/ahmad-zhafir" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ahmad-zhafir-29ba7735b" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/_.zfr_" class="social-link"><i class="fab fa-instagram" target="_blank"></i></a>
+                </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+  const images = document.querySelectorAll('.project-detail-image');
+  const dots = document.querySelectorAll('.dot');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  let current = 0;
+
+  function showImage(index) {
+    images.forEach((img, i) => {
+      img.classList.toggle('active', i === index);
+      dots[i].classList.toggle('active', i === index);
+    });
+    current = index;
+  }
+
+  prevBtn.addEventListener('click', () => {
+    const newIndex = (current - 1 + images.length) % images.length;
+    showImage(newIndex);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    const newIndex = (current + 1) % images.length;
+    showImage(newIndex);
+  });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => showImage(i));
+  });
+</script>
+
+</body>
+</html>

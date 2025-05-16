@@ -7,6 +7,12 @@ body {
     line-height: 1.6;
 }
 
+.wrapper {
+    
+    flex: 1;
+    
+}
+
 /* Navigation */
 .navbar {
     background-color: #0d1117;
@@ -20,7 +26,7 @@ body {
 .nav-container {
     max-width: 72rem;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 0.75rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -218,7 +224,7 @@ body {
 .footer-container {
     max-width: 72rem;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 0.75rem;
 }
 
 .footer-flex {
@@ -241,6 +247,7 @@ body {
     color: #9ca3af;
     margin-top: 0.5rem;
 }
+
 
 .social-links {
     display: flex;
@@ -379,6 +386,23 @@ body {
     color: #6b7280;
     font-size: 0.875rem;
 }
+
+
+.education-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.education-image {
+    width: 100px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 10%; 
+    vertical-align: middle; 
+    display: inline-block; 
+}
+
 
 /* Skills Page Styles */
 .skills-section {
@@ -547,8 +571,9 @@ body {
 
 .gallery-image {
     width: 100%;
-    height: 12rem;
-    object-fit: cover;
+    height: 22rem;
+    object-fit:cover;
+    object-position: center;
 }
 
 
@@ -663,7 +688,15 @@ body {
     color: white;
 }
 
-
+@media (min-width: 1800px) {
+    .main-container,
+    .nav-container,
+    .hero-container,
+    .section-container,
+    .footer-container {
+        max-width: 100rem;
+    }
+}
 /* Responsive Design */
 @media (min-width: 768px) {
     .gallery-grid {
@@ -701,3 +734,155 @@ body {
     }
 }
 
+/* Project Detail Section */
+.project-detail-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+}
+
+.project-detail-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+.project-detail-image {
+    display: none;
+    width: 500px;
+    height: 500px;
+    border-radius: 12px;
+    object-fit: contain;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-detail-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.project-detail-text p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.project-detail-text ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.project-detail-text li {
+    margin-bottom: 8px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.project-tag {
+    background-color: #e3e3e3;
+    color: #333;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.project-link {
+    display: inline-block;
+    background-color: #0077cc;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #005fa3;
+}
+
+.carousel {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.carousel-images {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.carousel-image {
+  display: none;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-image.active {
+  display: block;
+}
+
+/* Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* Dots */
+.carousel-dots {
+  margin-top: 10px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+.project-detail-image.active {
+      display: block;
+    }

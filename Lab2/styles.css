@@ -886,3 +886,97 @@ body {
 .project-detail-image.active {
       display: block;
     }
+
+
+.future-plans-section {
+    margin-top: 40px;
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.plan-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.plan-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center; 
+}
+
+.plan-list {
+    list-style: disc inside;
+    line-height: 1.8;
+    color: #555;
+      list-style-position: outside; /* default */
+  padding-left: 1.2em;          /* space for bullet */
+  margin-left: 0;
+}
+
+.plan-list li {
+  padding-left: 0.6em;  /* indent other lines */
+}
+
+
+.plan-card:hover{
+
+transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.education-card:hover{
+
+transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.roadmap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  border-left: 4px solid #005fa3;
+  padding-left: 1rem;
+}
+
+.milestone {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.milestone::before {
+  content: '';
+  position: absolute;
+  left: -14px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  background-color: #005fa3;
+  border-radius: 50%;
+}
+
+.roadmap .milestone h3 {
+  margin: 0 0 6px 0; /* no top margin, small bottom margin */
+  font-weight: 700;
+}
+
+.roadmap .milestone p {
+  margin: 0 0 6px 0; /* match spacing under the h3 */
+}
+
+.roadmap .milestone ul.plan-list {
+  margin: 0;
+  padding-left: 1.2em;
+}

@@ -90,6 +90,17 @@ body {
     overflow: hidden; /* Prevents accidental scrolling */
 }
 
+.hero-image {
+    margin-top: 0px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%; /* Makes it circular */
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
 .hero-container {
     max-width: 72rem;
     width: 100%;
